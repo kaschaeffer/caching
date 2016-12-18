@@ -1,17 +1,17 @@
 Demo of how false sharing can cause a multi-threaded program to be *slower* than a single-threaded program. Running the benchmark on my laptop gives,
 ```
-golang$ go test github.com/kaschaeffer/caching -bench=. -cpu=8
+caching$ go test github.com/kaschaeffer/caching -bench=. -cpu=1
 testing: warning: no tests to run
-BenchmarkRandArray1Core-8                   1000           1043888 ns/op
-BenchmarkRandArray2Core-8                   1000           1170034 ns/op
-BenchmarkRandArray8Core-8                   1000           1875210 ns/op
-BenchmarkRandArray16Core-8                  1000           2004669 ns/op
-BenchmarkRandArray32Core-8                  1000           2094006 ns/op
-BenchmarkSmartRandArray1Core-8              2000           1074827 ns/op
-BenchmarkSmartRandArray2Core-8              2000            898244 ns/op
-BenchmarkSmartRandArray8Core-8              2000            830723 ns/op
-BenchmarkSmartRandArray16Core-8             2000            849677 ns/op
-BenchmarkSmartRandArray32Core-8             2000            871643 ns/op
+BenchmarkRandArrayConcurrency1              2000           1037069 ns/op
+BenchmarkRandArrayConcurrency2              1000           1477427 ns/op
+BenchmarkRandArrayConcurrency8               300           4111978 ns/op
+BenchmarkRandArrayConcurrency16              300           4987083 ns/op
+BenchmarkRandArrayConcurrency32              300           5269392 ns/op
+BenchmarkSmartRandArrayConcurrency1         2000           1055584 ns/op
+BenchmarkSmartRandArrayConcurrency2         1000           1088241 ns/op
+BenchmarkSmartRandArrayConcurrency8         2000           1089109 ns/op
+BenchmarkSmartRandArrayConcurrency16        2000           1085773 ns/op
+BenchmarkSmartRandArrayConcurrency32        1000           1068439 ns/op
 PASS
-ok      github.com/kaschaeffer/caching  18.580s
+ok      github.com/kaschaeffer/caching  18.795s
 ```
