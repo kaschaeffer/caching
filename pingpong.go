@@ -2,7 +2,6 @@ package caching
 
 import (
 	"fmt"
-	"math/rand"
 )
 
 func populate(array []int, offset int, step int, done chan<- bool) {
@@ -60,7 +59,6 @@ func RandArray(size int, nThreads int) []int {
 }
 
 func main() {
-	rand.Seed(42)
 	array := RandArray(10000000, 16)
 
 	for n := 0; n < 10; n++ {
