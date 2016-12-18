@@ -16,14 +16,14 @@ func benchmarkSmartRandArray(b *testing.B, concurrency int) {
 	}
 }
 
-func BenchmarkRandArray1Core(b *testing.B)  { benchmarkRandArray(b, 1) }
-func BenchmarkRandArray2Core(b *testing.B)  { benchmarkRandArray(b, 2) }
-func BenchmarkRandArray8Core(b *testing.B)  { benchmarkRandArray(b, 8) }
-func BenchmarkRandArray16Core(b *testing.B) { benchmarkRandArray(b, 16) }
-func BenchmarkRandArray32Core(b *testing.B) { benchmarkRandArray(b, 32) }
+func BenchmarkRandArrayConcurrency1(b *testing.B)  { benchmarkRandArray(b, 1) }
+func BenchmarkRandArrayConcurrency2(b *testing.B)  { benchmarkRandArray(b, 2) }
+func BenchmarkRandArrayConcurrency8(b *testing.B)  { benchmarkRandArray(b, 8) }
+func BenchmarkRandArrayConcurrency16(b *testing.B) { benchmarkRandArray(b, 16) }
+func BenchmarkRandArrayConcurrency32(b *testing.B) { benchmarkRandArray(b, 32) }
 
-func BenchmarkSmartRandArray1Core(b *testing.B)  { benchmarkSmartRandArray(b, 1) }
-func BenchmarkSmartRandArray2Core(b *testing.B)  { benchmarkSmartRandArray(b, 2) }
-func BenchmarkSmartRandArray8Core(b *testing.B)  { benchmarkSmartRandArray(b, 8) }
-func BenchmarkSmartRandArray16Core(b *testing.B) { benchmarkSmartRandArray(b, 16) }
-func BenchmarkSmartRandArray32Core(b *testing.B) { benchmarkSmartRandArray(b, 32) }
+func BenchmarkSmartRandArrayConcurrency1(b *testing.B)  { benchmarkSmartRandArray(b, 1) }
+func BenchmarkSmartRandArrayConcurrency2(b *testing.B)  { benchmarkSmartRandArray(b, 2) }
+func BenchmarkSmartRandArrayConcurrency8(b *testing.B)  { benchmarkSmartRandArray(b, 8) }
+func BenchmarkSmartRandArrayConcurrency16(b *testing.B) { benchmarkSmartRandArray(b, 16) }
+func BenchmarkSmartRandArrayConcurrency32(b *testing.B) { benchmarkSmartRandArray(b, 32) }
